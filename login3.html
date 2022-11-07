@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>User Account</title>
+    <link rel="stylesheet" href="st.css">
+    <link href='https://fonts.googleapis.com/css?family=Sofia' 
+          rel='stylesheet' />
+          <style>
+            h3{
+                font-family: Sans-serif;
+                color: rgb(154, 39, 39);
+            }
+          </style>
+          <script src="index.js"></script>
+          
+</head>
+<body>
+<div class="head">
+        <div class="form-box1">
+            <form action="/" method="post" id="comments">
+                <div class="button-box">
+                    <h3>Welcome </h3>
+                </div>
+                <br>
+                <h4 class="h4">Please enter details</h4><br>
+                <table>
+                    <form id="register" class="input-group">
+                        <label for="" class="lbl">DOB
+                        <input type="number" min="1" max="31" id="dd" name="dd" placeholder="DD" class="dd" required>
+                            <input type="number" min="1" max="12" id="mm" name="mm" placeholder="MM" class="mm" required>
+                            <input type="number" min="1900" max="2022" id="yy" name="yy" placeholder="YY" class="yy" required></label>
+                            
+                            <div class="radio" require_once>
+                            <label for="gender" class="gender">Gender</label><input type="radio" class="radio" checked=true name="gender">Male
+                            <input type="radio"  id="gender" name="gender" class="radio">Female</div></label><br>
+                            <tr><td><label for="" class="ph">Ph No</label>
+                            <input type="text" minlength="10" maxlength="10" class="input-field4" placeholder="Phone Number" id="phno" name="phno" required></td>
+                    </form>
+                    <tr>
+                        <td><button type="submit" onclick="login1()" id="sub" class="submit-btn" id="submit" value="Update" name="submit"></a> Submit</td></tr></button>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

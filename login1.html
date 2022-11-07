@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login Form</title>
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="st.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Sofia' 
+          rel='stylesheet' />
+          <style>
+            h3{
+                font-family: Sans-serif;
+                color: rgb(154, 39, 39);
+            }
+          </style>
+          <script src="login.js"></script>
+          <script>
+            $(document).ready(function(){
+                $('form').on("submit", function(e){
+                    e.preventDefault();
+                    $.ajax({
+                        type:"post",
+                        url: "login1.html",
+                        data : $('form').serialize(),
+                        success : function(){
+                            $(location).prop("href", "login1.php");
+                        },
+                        error: function(){
+                            alert("Authentication failed");
+                        }
+                    })
+                });
+            });
+        </script>
+</head>
+<body>  
+    <div class="head">
+        <div class="form-box">
+            <form action="login1.php" method="post" id="comments">
+                <div class="button-box">
+                    <h3>Sign Up</h3>
+                </div>
+                <table>
+                    <form id="register" class="input-group">
+                        <div class="input-field">
+                            <tr>
+                                <td><input type="text" id="fname" class="input-field" name="fname" placeholder="First Name" required></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" id="lname" class="input-field" name="lname" placeholder="Last Name" required></td>
+                            </tr>
+                            <tr>
+                                <td><input type="email" id="email" class="input-field" name="email" placeholder="Email" required></td>
+                            </tr>
+                            <tr>
+                                <td><input type="password" id="password" class="input-field" name="password" placeholder="Password" required></td>
+                            </tr>
+                        </div>
+                    </form>
+                    <tr>
+                        <td><input type="submit" onclick="login()" id="sub" class="submit-btn" id="submit" value="Register" name="submit"></td>
+                    </tr>
+                </table>
+            </form>
+</body>
+</html>
