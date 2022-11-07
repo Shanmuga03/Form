@@ -14,24 +14,6 @@
             }
           </style>
           <script src="login.js"></script>
-          <script>
-            $(document).ready(function(){
-                $('form').on("submit", function(e){
-                    e.preventDefault();
-                    $.ajax({
-                        type:"post",
-                        url: "login1.html",
-                        data : $('form').serialize(),
-                        success : function(){
-                            $(location).prop("href", "login1.php");
-                        },
-                        error: function(){
-                            alert("Authentication failed");
-                        }
-                    })
-                });
-            });
-        </script>
 </head>
 <body>  
     <div class="head">
